@@ -15,7 +15,7 @@
 
 class Store:
 
-    def __init__(self, name, price, quantity, num_in_list, *args):
+    def __init__(self, name, price, quantity, num_in_list):
         self.name = name
         self.price = price
         self.quantity = quantity
@@ -28,6 +28,7 @@ class Store:
 
     def __str__(self):
         return f'{self.name} цена {self.price} количество {self.quantity}'
+
     def reception(self):
         try:
             unit = input(f'Введите наименование модели устройства ')
@@ -49,19 +50,25 @@ class Store:
             return f'Конец сессии'
         else:
             return Store.reception(self)
+
+
 class Printer(Store):
     def to_print(self):
         return f'to print s {self.numb} times'
+
+
 class Scanner(Store):
     def to_scan(self):
         return f'to scan s {self.numb} times'
+
+
 class Copier(Store):
     def to_copier(self):
         return f'to copier s  {self.numb} times'
 
 
-unit_1 = Printer('Sony', 8526, 6, 52)
-unit_2 = Scanner('HP', 1200, 5, 10)
+unit_1 = Printer('Sony', 856, 6, 52)
+unit_2 = Scanner('HP', 120, 5, 10)
 unit_3 = Copier('DPN', 15, 1, 13)
 print(unit_1.reception())
 print(unit_2.reception())
