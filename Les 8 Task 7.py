@@ -19,8 +19,8 @@ class ComplexNumber:
     def __str__(self):
         return f'{self.a} + {self.b} * i'
 
-x = ComplexNumber(58, 8)
-y = ComplexNumber(-5, 100)
+x = ComplexNumber(55, 20)
+y = ComplexNumber(-5, 10)
 print(x)
 print(y)
 print(x + y)

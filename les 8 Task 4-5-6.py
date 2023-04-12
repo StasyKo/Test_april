@@ -60,8 +60,8 @@ class Copier(Store):
         return f'to copier s  {self.numb} times'
 
 
-unit_1 = Printer('Sony', 8526, 6, 52)
-unit_2 = Scanner('HP', 1200, 5, 10)
+unit_1 = Printer('Sony', 856, 6, 52)
+unit_2 = Scanner('HP', 120, 5, 10)
 unit_3 = Copier('DPN', 15, 1, 13)
 print(unit_1.reception())
 print(unit_2.reception())

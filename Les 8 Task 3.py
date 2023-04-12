@@ -24,5 +24,5 @@ class Error:
                 else:
                     return f'Программа завершена'
 
-try_except = Error(1)
+try_except = Error()
 print(try_except.my_input())
