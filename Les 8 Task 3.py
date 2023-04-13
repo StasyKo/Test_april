@@ -6,8 +6,9 @@
 
 
 class Error:
-    def __init__(self, *args):
+    def __init__(self):
         self.my_list = []
+
     def my_input(self):
         while True:
             try:
@@ -17,12 +18,13 @@ class Error:
             except:
                 print(f"Ошибка ввода, вводите только числа")
                 try_again = input(f'Попробуйте снова? y/n ')
-                if try_again == 'Y' or try_again == 'y':
+                if try_again == 'y':
                     print(try_except.my_input())
-                elif try_again == 'N' or try_again == 'n':
+                elif try_again == 'n':
                     return f'Программа завершена'
                 else:
                     return f'Программа завершена'
 
-try_except = Error(1)
+
+try_except = Error()
 print(try_except.my_input())
