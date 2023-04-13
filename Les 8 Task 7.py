@@ -5,22 +5,26 @@
 # экземпляров. Проверьте корректность полученного результата.
 
 class ComplexNumber:
-    def __init__(self, a, b, *args):
+    def __init__(self, a, b):
         self.a = a
         self.b = b
         self.c = 'a + b * i'
+
     def __add__(self, other):
         print(f'Сумма чисел равна:')
         return f'{self.a + other.a} + {self.b + other.b} * i'
+
     def __mul__(self, other):
         print(f'Произведение чисел равно:')
         return f' {self.a * other.a - (self.b * other.b)} +' \
                f' {self.b * other.a} * i'
+
     def __str__(self):
         return f'{self.a} + {self.b} * i'
 
-x = ComplexNumber(58, 8)
-y = ComplexNumber(-5, 100)
+
+x = ComplexNumber(55, 20)
+y = ComplexNumber(-5, 10)
 print(x)
 print(y)
 print(x + y)
